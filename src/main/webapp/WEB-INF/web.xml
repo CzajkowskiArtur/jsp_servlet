@@ -1,0 +1,53 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Dupa</display-name>
+
+  <filter>
+    <filter-name>LoggedUserFilter</filter-name>
+    <filter-class>pl.sdacademy.filter.LoggedUserFilter</filter-class>
+  </filter>
+
+  <servlet>
+    <servlet-name>SimpleCalendarServlet</servlet-name>
+    <servlet-class>pl.sdacademy.servlet.SimpleCalendarServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HeadersServlet</servlet-name>
+    <servlet-class>pl.sdacademy.servlet.AllHeadersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SessionServlet</servlet-name>
+    <servlet-class>pl.sdacademy.servlet.AllHeadersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DayListServlet</servlet-name>
+    <servlet-class>pl.sdacademy.servlet.DaysListServlet</servlet-class>
+  </servlet>
+
+  <filter-mapping>
+    <filter-name>LoggedUserFilter</filter-name>
+    <url-pattern>/zabezpierczone/*</url-pattern>
+  </filter-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SimpleCalendarServlet</servlet-name>
+    <url-pattern>/zabezpieczone/calendar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HeadersServlet</servlet-name>
+    <url-pattern>/zabezpieczone/headers</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SessionServlet</servlet-name>
+    <url-pattern>/zabezpieczone/session</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>DayListServlet</servlet-name>
+    <url-pattern>/zabezpieczone/days</url-pattern>
+  </servlet-mapping>
+
+</web-app>
