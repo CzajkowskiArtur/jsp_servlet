@@ -11,6 +11,11 @@
   </filter>
 
   <servlet>
+    <servlet-name>Calculator</servlet-name>
+    <servlet-class>pl.sdacademy.servlet.Calculator</servlet-class>
+  </servlet>
+
+  <servlet>
     <servlet-name>SimpleCalendarServlet</servlet-name>
     <servlet-class>pl.sdacademy.servlet.SimpleCalendarServlet</servlet-class>
   </servlet>
@@ -32,6 +37,11 @@
     <url-pattern>/zabezpierczone/*</url-pattern>
   </filter-mapping>
 
+
+  <servlet-mapping>
+    <servlet-name>Calculator</servlet-name>
+    <url-pattern>/calculator/*</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>SimpleCalendarServlet</servlet-name>
     <url-pattern>/zabezpieczone/calendar</url-pattern>
